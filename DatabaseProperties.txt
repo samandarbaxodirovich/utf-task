@@ -1,0 +1,3 @@
+server - mel.db.elephantsql.com
+User & Default database - sbfvpheh
+Password - Y6axi7GNkhJXBL06AT2Xkrz2JkJgJpp9

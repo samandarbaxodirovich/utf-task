@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] utf-task</title>
+    <link href="~/Images/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <link href="~/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid justify-content-between">
+            <!-- Left elements -->
+            <div class="d-flex">
+                <!-- Brand -->
+                <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+                    <h1 class="m-0 text-primary" style="margin-top: 2px;"><span class="text-dark">UTF-</span>Task</h1>
+                </a>
+
+                <!-- Search form -->
+                <form class="input-group w-auto my-auto d-none d-sm-flex">
+                    <input autocomplete="off"
+                           type="search"
+                           class="form-control rounded"
+                           placeholder="Search"
+                           style="min-width: 125px;" />
+                    <span class="input-group-text border-0 d-none d-lg-flex">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </form>
+            </div>
+            <!-- Left elements -->
+            <!-- Center elements -->
+            <ul class="navbar-nav flex-row d-none d-md-flex">
+                <template>
+                    <div>
+                        <label for="timepicker-sm">Small time picker</label>
+                        <b-form-timepicker id="timepicker-sm" size="sm" locale="en" class="mb-2"></b-form-timepicker>
+
+                        <label for="timepicker-lg">Large time picker</label>
+                        <b-form-timepicker id="timepicker-lg" size="lg" locale="en"></b-form-timepicker>
+                    </div>
+                </template>
+            </ul>
+            <!-- Center elements -->
+            <!-- Right elements -->
+            <ul class="navbar-nav flex-row">
+
+                <li class="nav-item dropdown me-3 me-lg-1">
+                    <a class="nav-link dropdown-toggle hidden-arrow"
+                       href="#"
+                       id="navbarDropdownMenuLink"
+                       role="button"
+                       data-mdb-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="fas fa-comments fa-lg"></i>
+
+                        <span class="badge rounded-pill badge-notification bg-danger">6</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown me-3 me-lg-1">
+                    <a class="nav-link dropdown-toggle hidden-arrow"
+                       href="#"
+                       id="navbarDropdownMenuLink"
+                       role="button"
+                       data-mdb-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="fas fa-bell fa-lg"></i>
+                        <span class="badge rounded-pill badge-notification bg-danger">12</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link d-sm-flex align-items-sm-center" asp-controller="account" asp-action="login">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+                             class="rounded-circle"
+                             height="22"
+                             alt="Black and White Portrait of a Man"
+                             loading="lazy" />
+                        <strong class="d-none d-sm-block ms-1">Admin</strong>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btn-outline-secondary btn-rounded bg-success text-center" asp-controller="Account" asp-action="register" style="border-radius:20px;"><i class="fas fa-plus-circle fa-lg"></i>Register Employee</a>
+                </li>
+
+            </ul>
+            <!-- Right elements -->
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <div>
+
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div>
+            @RenderBody()
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
